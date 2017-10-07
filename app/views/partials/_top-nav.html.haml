@@ -1,0 +1,121 @@
+.header-container
+  %ul.nav-left
+    %li
+      %a.side-nav-toggle{:href => "javascript:void(0);"}
+        %i.ti-view-grid
+    %li.search-box
+      %a.search-toggle.no-pdd-right{:href => "javascript:void(0);"}
+        %i.search-icon.ti-search.pdd-right-10
+        %i.search-icon-close.ti-close.pdd-right-10
+    %li.search-input
+      %input.form-control{:placeholder => "Search...", :type => "text"}/
+      .advanced-search
+        .search-wrapper
+          .pdd-vertical-10
+            %span.display-block.mrg-vertical-5.pdd-horizon-20.text-gray
+              %i.ti-user.pdd-right-5
+              %span People
+            %ul.list-unstyled.list-info
+              %li
+                %a{:href => ""}
+                  %img.thumb-img{:alt => "", :src => "assets/images/avatars/thumb-1.jpg"}/
+                  .info
+                    %span.title Jordan Hurst
+                    %span.sub-title
+                      %i.ti-location-pin
+                      %span 44 Shirley Ave. West Chicago
+              %li
+                %a{:href => ""}
+                  %img.thumb-img{:alt => "", :src => "assets/images/avatars/thumb-5.jpg"}/
+                  .info
+                    %span.title Jennifer Watkins
+                    %span.sub-title
+                      %i.ti-location-pin
+                      %span 514 S. Magnolia St. Orlando
+              %li
+                %a{:href => ""}
+                  %img.thumb-img{:alt => "", :src => "assets/images/avatars/thumb-4.jpg"}/
+                  .info
+                    %span.title Michael Birch
+                    %span.sub-title
+                      %i.ti-location-pin
+                      %span 70 Bowman St. South Windsor
+          .mrg-horizon-20.border.top
+          .pdd-vertical-10
+            %span.display-block.mrg-vertical-5.pdd-horizon-20.text-gray
+              %i.ti-rss.pdd-right-5
+              %span Post
+            %ul.list-unstyled.list-info
+              %li
+                %a{:href => ""}
+                  %img.thumb-img{:alt => "", :src => "assets/images/img-1.jpg"}/
+                  .info
+                    %span.title Artoo expresses his relief
+                    %span.sub-title
+                      %span Oh, thank goodness we're coming out...
+              %li
+                %a{:href => ""}
+                  %img.thumb-img{:alt => "", :src => "assets/images/img-2.jpg"}/
+                  .info
+                    %span.title Ready for some power?
+                    %span.sub-title
+                      %span Lord Vader. You may take Caption So...
+        .search-footer
+          %span
+            You are Searching for '
+            %b.text-dark>
+              %span.serach-text-bind
+            '
+  %ul.nav-right
+    %li.user-profile.dropdown
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}
+        %img.profile-img.img-fluid{:alt => "", :src => "assets/images/user.jpg"}/
+        .user-info
+          %span.name.pdd-right-5 Nate Leong
+          %i.ti-angle-down.font-size-10
+      %ul.dropdown-menu
+        %li
+          %a{:href => ""}
+            %i.ti-settings.pdd-right-10
+            %span Setting
+        %li
+          %a{:href => ""}
+            %i.ti-user.pdd-right-10
+            %span Profile
+        %li
+          %a{:href => ""}
+            %i.ti-email.pdd-right-10
+            %span Inbox
+        %li.divider{:role => "separator"}
+        %li
+          %a{:href => ""}
+            %i.ti-power-off.pdd-right-10
+            %span Logout
+    %li.notifications.dropdown
+      %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}
+        %i.ti-bell
+      %ul.dropdown-menu
+        %li.notice-header
+          %i.ti-bell.pdd-right-10
+          %span Notifications
+        %li
+          %ul.list-info.overflow-y-auto.relative.scrollable
+            %li
+              %a{:href => ""}
+                %img.thumb-img{:alt => "", :src => "assets/images/avatars/thumb-5.jpg"}/
+                .info
+                  %span.title
+                    %span.font-size-14.text-semibold Jennifer Watkins
+                    %span.text-gray
+                      commented on your
+                      %span.text-dark post
+                  %span.sub-title 5 mins ago
+           
+        %li.notice-footer
+          %span
+            %a.text-gray{:href => ""}
+              Check all notifications
+              %i.ei-right-chevron.pdd-left-5.font-size-10
+    %li
+      %a.side-panel-toggle{:href => "javascript:void(0);"}
+        %i.ti-align-right

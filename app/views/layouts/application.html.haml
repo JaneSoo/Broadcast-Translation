@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title BroadcastTranslation
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application'
+  %body
+    .app
+      .layout
+        .side-nav
+          = render 'partials/sidebar'
+        .page-container
+          .header.navbar
+            = render 'partials/top-nav'
+          .side-panel
+            = render 'partials/side-panel'
+    
+          .main-content
+            .container-fluid
+              = yield
+          .content-footer
+            = render 'partials/footer'
+
+    
+    = javascript_include_tag 'application'

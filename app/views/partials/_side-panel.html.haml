@@ -1,0 +1,65 @@
+.side-panel-wrapper.bg-white
+  %ul.nav.nav-tabs{:role => "tablist"}
+    %li.nav-item.active
+      %a.nav-link{"data-toggle" => "tab", :href => "index.html#chat", :role => "tab"}
+        %span Chat
+    %li.nav-item
+      %a.nav-link{"data-toggle" => "tab", :href => "index.html#profile", :role => "tab"}
+        %span Profile
+    %li.nav-item
+      %a.nav-link{"data-toggle" => "tab", :href => "index.html#todo-list", :role => "tab"}
+        %span Todo
+    %li.panel-close
+      %a.side-panel-toggle{:href => "javascript:void(0);"}
+        %i.ti-close
+  .tab-content
+    / chat START
+    #chat.tab-pane.fade.in.active{:role => "tabpanel"}
+      .chat
+        .chat-user-list.scrollable
+          .chat-section
+            %h5.chat-title Recent
+            
+          .chat-section
+            %h5.chat-title Members
+            
+        .conversation
+          .conversation-wrapper
+            .conversation-header
+              %a.back.chat-toggle{:href => "javascript:void(0);"}
+                %i.ti-arrow-circle-left
+              %span.user-name Jordan Hurst
+            .conversation-body
+              .msg
+                .bubble.me
+                  %span Feeling all right, sir?
+              .msg
+                .bubble.friend
+                  %span Just like new
+              .msg
+                .bubble.friend
+                  %span How about you?
+              .msg
+                .bubble.me
+                  %span Right now I feel I could take on the whole Empire myself
+              .msg
+                .bubble.friend
+                  %span All right
+            .conversation-footer
+              %button.upload-btn
+                %i.ti-camera
+              %input.chat-input{:placeholder => "Type a message...", :type => "text"}/
+              %button.sent-btn
+                %i.fa.fa-send-o
+    / chat END
+    / profile START
+    #profile.tab-pane.fade{:role => "tabpanel"}
+      .profile.scrollable
+        
+    / profile END
+    / todo START
+    #todo-list.tab-pane.fade{:role => "tabpanel"}
+      .todo-wrapper
+        .todo-category-wrapper
+          
+          
