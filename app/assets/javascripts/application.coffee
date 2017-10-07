@@ -6,3 +6,8 @@
 #= require js/index
 #= require js/chart
 #= require js/app
+
+#= require namespace
+#= require common
+#= require util
+#= require initializer

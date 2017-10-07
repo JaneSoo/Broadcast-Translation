@@ -1,0 +1,2 @@
+Codingate.Common =
+  init: ->
