@@ -17,7 +17,7 @@ gem 'simple_form',        '3.5.0'
 gem 'carrierwave',        '~> 1.1.0'
 gem 'devise',             '~> 4.3.0'
 gem 'font-awesome-rails', '~> 4.7.0.2'
-gem 'haml-rails',         '~> 0.9'
+gem 'haml-rails', '~> 1.0'
 gem 'bootstrap', '~> 4.0.0.beta'
 
 group :development, :test do

@@ -1,0 +1,15 @@
+.side-nav-inner
+  .side-nav-logo
+    %a{:href => "index.html"}
+      .logo.logo-dark{:style => "background-image: url('/assets/images/logo/logo.png')"}
+      .logo.logo-white{:style => "background-image: url('/assets/images/logo/logo-white.png')"}
+    .mobile-toggle.side-nav-toggle
+      %a{:href => ""}
+        %i.ti-arrow-circle-left
+  %ul.side-nav-menu.scrollable
+    %li.nav-item.active
+      = link_to root_url, class: 'mrg-top-30' do
+        %span.icon-holder
+          %i.ti-home
+        %span.title Dashboard
+    
