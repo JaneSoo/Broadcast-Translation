@@ -1,5 +1,12 @@
-%h1 New translator
+.page-title
+  %h4 Translators
 
-= render 'form'
+.card
+  .card-block
+    %h4.card-title New Translator
 
-= link_to 'Back', translators_path
+    = render 'form'
+
+    = link_to translators_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back
