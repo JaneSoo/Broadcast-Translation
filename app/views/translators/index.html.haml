@@ -1,0 +1,27 @@
+%h1 Listing translators
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Phone
+      %th Gender
+      %th
+      %th
+      %th
+
+  %tbody
+    - @translators.each do |translator|
+      %tr
+        %td= translator.name
+        %td= translator.email
+        %td= translator.phone
+        %td= translator.gender
+        %td= link_to 'Show', translator
+        %td= link_to 'Edit', edit_translator_path(translator)
+        %td= link_to 'Destroy', translator, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Translator', new_translator_path

@@ -1,0 +1,11 @@
+= simple_form_for(@translator) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :email
+    = f.input :phone
+    = f.input :gender
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @translator.name
+%p
+  %b Email:
+  = @translator.email
+%p
+  %b Phone:
+  = @translator.phone
+%p
+  %b Gender:
+  = @translator.gender
+
+= link_to 'Edit', edit_translator_path(@translator)
+\|
+= link_to 'Back', translators_path
