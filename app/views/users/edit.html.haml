@@ -1,0 +1,15 @@
+.page-title
+  %h4 Users
+
+.card
+  .card-block
+    %h4.card-title New User
+
+    = render 'form'
+    %hr
+    = link_to users_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back
+    = link_to @user, class: 'btn btn-info' do
+      %i.fa.fa-eye
+      Show
