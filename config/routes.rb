@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :translators
     resources :users
     resources :events
+    resources :requests, only: [:show, :index]
     resources :dashboard, only: :index
 
     scope 'auth' do
@@ -14,6 +15,4 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-
-  
 end
