@@ -1,0 +1,24 @@
+.page-title
+  %h4 Request
+
+.card
+  .card-block
+    %h4.card-title Listing Requests
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Status
+          %th Translator
+          %th Broadcast Room
+          %th.text-right Actions
+
+      %tbody
+        - @requests.each do |request|
+          %tr
+            %td= request.status
+            %td= request.translator.name
+            %td= request.broadcast_room.title
+            %td.text-right
+              = link_to request, class: 'btn btn-info' do
+                = fa_icon 'eye'
+                Show
