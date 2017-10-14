@@ -1,0 +1,37 @@
+.page-title
+  %h4 Translators
+
+.card
+  .card-block
+    %h4.card-title Listing Translators
+    .pull-right
+      = link_to new_translator_path, class: 'btn btn-primary' do
+        = fa_icon 'plus'
+        New Translator
+
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Name
+          %th Email
+          %th Phone
+          %th Gender
+          %th.text-right Actions
+
+      %tbody
+        - @translators.each do |translator|
+          %tr
+            %td= translator.name
+            %td= translator.email
+            %td= translator.phone
+            %td= translator.gender
+            %td.text-right
+              = link_to translator, class: 'btn btn-info' do
+                = fa_icon 'eye'
+                Show
+              = link_to [:edit, translator], class: 'btn btn-primary' do
+                = fa_icon 'edit'
+                Edit
+              = link_to translator, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do
+                = fa_icon 'trash'
+                Delete

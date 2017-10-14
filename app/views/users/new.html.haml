@@ -1,9 +1,12 @@
 .page-title
-  %h4 User
-.row
-  .col-md-12
-    .card
-      .card-block
-        %h4.card-title New User
-        = render 'form'
-        = link_to 'Back', users_path
+  %h4 Users
+
+.card
+  .card-block
+    %h4.card-title New User
+
+    = render 'form'
+    %hr
+    = link_to users_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back

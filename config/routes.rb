@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  
   root 'dashboard#index'
 
+  resources :translators
   resources :users
 
   scope 'auth' do
