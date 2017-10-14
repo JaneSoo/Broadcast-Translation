@@ -1,6 +1,24 @@
+%page.title
+  %h4 User
 %p#notice= notice
-
-
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+.card
+  .card-block
+    %h4.card-title Show User
+  .mrg-top-20
+    %table.table
+      %col{width: 10}
+      %col{width: 300}
+      %tr
+        %th Name :
+        %td= @user.name
+      %tr
+        %th Email :
+        %td= @user.email
+    %hr
+    .mrg-top-25
+      = link_to users_path, class: 'btn btn-default' do
+        %i.fa.fa-cheveron-left
+        Back
+      = link_to [:edit, @user], class: 'btn btn-primary' do
+        %i.fa.fa-edit
+        Edit

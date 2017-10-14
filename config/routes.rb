@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  scope do
+  scope 'auth' do
     devise_for :users
   end
   

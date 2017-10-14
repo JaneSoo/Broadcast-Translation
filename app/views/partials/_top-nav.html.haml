@@ -79,7 +79,7 @@
             %i.ti-settings.pdd-right-10
             %span Setting
         %li
-          %a{:href => ""}
+          = link_to edit_user_registration_path do
             %i.ti-user.pdd-right-10
             %span Profile
         %li
@@ -88,9 +88,10 @@
             %span Inbox
         %li.divider{:role => "separator"}
         %li
-          %a{:href => ""}
+          = link_to destroy_user_session_path do
             %i.ti-power-off.pdd-right-10
-            %span Logout
+            Logout
+
     %li.notifications.dropdown
       %a.dropdown-toggle{"data-toggle" => "dropdown", :href => ""}
         %i.ti-bell

@@ -1,19 +1,30 @@
-%h1 Listing users
+.page-title
+  %h4 User
+.row
+  .col-md-12
+    .card
+      .card-block
+        %h4.card-title List all users
+        %table.table
+          %thead
+            %tr
+              %th Name 
+              %th Role
+              %th Email
+              %th Actions
+            
+          %tbody
+          - @users.each do |user|
+            %tr
+              %td 
+                = user.name
+              %td
+                = user.role
+              %td 
+                = user.email
+              %td
+                = link_to 'Show', user, class: 'btn btn-info'
+                = link_to 'Edit', edit_user_path(user), class: 'btn btn-warning'
+                = link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-
-  %tbody
-    - @users.each do |user|
-      %tr
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New User', new_user_path
+        = link_to 'New User', new_user_path, class: 'btn btn-primary'
