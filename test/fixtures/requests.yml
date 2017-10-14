@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  translator: one
+  broadcast_room: one
+  user: one
+
+two:
+  status: MyString
+  translator: two
+  broadcast_room: two
+  user: two

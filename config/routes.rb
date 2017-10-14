@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :translators
   resources :users
   resources :events
+  resources :requests, only: [:show, :index]
 
   scope 'auth' do
     devise_for :users

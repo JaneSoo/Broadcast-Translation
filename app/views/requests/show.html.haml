@@ -1,0 +1,25 @@
+%page.title
+  %h4 Requests
+%p#notice= notice
+.card
+  .card-block
+    %h4.card-title Show Request
+  .mrg-top-20
+    %table.table
+      %col{width: 10}
+      %col{width: 300}
+      %tr
+        %th Status :
+        %td= @request.status
+      %tr
+        %th Translator :
+        %td= @request.translator.name
+      %tr
+        %th Broadcast Room:
+        %td= @request.broadcast_room.title
+    
+    %hr
+    .mrg-top-25
+      = link_to requests_path, class: 'btn btn-default' do
+        %i.fa.fa-chevron-left
+        Back
