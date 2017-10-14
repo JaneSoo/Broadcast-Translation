@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
-  
-  root 'dashboard#index'
 
-  resources :broadcast_rooms
-  resources :translators
-  resources :users
-  resources :events
+  scope 'admin' do
+    resources :broadcast_rooms
+    resources :translators
+    resources :users
+    resources :events
+    resources :dashboard, only: :index
 
-  scope 'auth' do
-    devise_for :users
+    scope 'auth' do
+      devise_for :users
+    end
   end
+
+  root "home#index"
+
+
   
 end
