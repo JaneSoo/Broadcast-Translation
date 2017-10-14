@@ -23,3 +23,15 @@
       = link_to requests_path, class: 'btn btn-default' do
         %i.fa.fa-chevron-left
         Back
+
+          
+
+      .pull-right
+        = link_to approve_request_path(@request), method: :patch, class: 'btn btn-success' do
+          %i.fa.fa-check
+          Approve
+       
+        = link_to reject_request_path(@request), method: :patch, class: 'btn btn-danger' do
+          %i.fa.fa-close
+          Reject
+

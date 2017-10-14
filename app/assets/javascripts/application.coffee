@@ -1,3 +1,5 @@
+#= require jquery
+#= require jquery_ujs
 #= require js/vendor
 #= require js/jquery-jvectormap-1.2.2
 #= require js/jquery-jvectormap-us-aea

@@ -5,7 +5,12 @@ Rails.application.routes.draw do
     resources :translators
     resources :users
     resources :events
-    resources :requests, only: [:show, :index]
+    resources :requests, only: [:show, :index] do
+      member do
+        patch :reject
+        patch :approve
+      end
+    end
     resources :dashboard, only: :index
 
     scope 'auth' do

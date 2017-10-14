@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171014035144) do
+ActiveRecord::Schema.define(version: 20171014044253) do
 
   create_table "broadcast_rooms", force: :cascade do |t|
     t.string "title"
@@ -32,15 +32,36 @@ ActiveRecord::Schema.define(version: 20171014035144) do
   end
 
   create_table "requests", force: :cascade do |t|
-    t.string "status", default: "submitted"
     t.integer "translator_id"
     t.integer "broadcast_room_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "submitted"
     t.index ["broadcast_room_id"], name: "index_requests_on_broadcast_room_id"
     t.index ["translator_id"], name: "index_requests_on_translator_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.integer "translator_id"
+    t.integer "broadcast_room_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["broadcast_room_id"], name: "index_statuses_on_broadcast_room_id"
+    t.index ["translator_id"], name: "index_statuses_on_translator_id"
+    t.index ["user_id"], name: "index_statuses_on_user_id"
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string "venue"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_titles_on_user_id"
   end
 
   create_table "translators", force: :cascade do |t|

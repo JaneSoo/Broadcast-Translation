@@ -34,3 +34,4 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'aasm', '~> 4.12', '>= 4.12.2'
