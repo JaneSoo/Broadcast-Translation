@@ -1,0 +1,12 @@
+.page-title
+  %h4 Events
+
+.card
+  .card-block
+    %h4.card-title New Event
+
+    = render 'form'
+    %hr
+    = link_to events_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back

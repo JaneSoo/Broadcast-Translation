@@ -1,0 +1,33 @@
+%page.title
+  %h4 Event
+%p#notice= notice
+.card
+  .card-block
+    %h4.card-title Show Event
+  .mrg-top-20
+    %table.table
+      %col{width: 10}
+      %col{width: 300}
+      %tr
+        %th Name :
+        %td= @event.title
+      %tr
+        %th Venue :
+        %td= @event.venue
+      %tr
+        %th Start date:
+        %td= @event.start_date
+      %tr
+        %th End date:
+        %td= @event.end_date
+      %tr
+        %th Created by:
+        %td= @event.user.name
+    %hr
+    .mrg-top-25
+      = link_to events_path, class: 'btn btn-default' do
+        %i.fa.fa-chevron-left
+        Back
+      = link_to [:edit, @event], class: 'btn btn-primary' do
+        %i.fa.fa-edit
+        Edit

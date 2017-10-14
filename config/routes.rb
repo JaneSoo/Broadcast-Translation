@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :translators
   resources :users
+  resources :events
 
   scope 'auth' do
     devise_for :users
