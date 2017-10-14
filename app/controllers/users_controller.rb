@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update_without_password(user_params)
       redirect_to @user, notice: 'User was successfully updated.'
     else
       render :edit

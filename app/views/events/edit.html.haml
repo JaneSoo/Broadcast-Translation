@@ -1,12 +1,15 @@
 .page-title
-  %h4 Event
-.row
-  .col-md-12
-    .card
-      .card-block
-        %h4.card-title Editing Event
+  %h4 Events
 
-        = render 'form'
+.card
+  .card-block
+    %h4.card-title Editing Event
 
-        = link_to 'Show', @event, class: 'btn btn-info'
-        = link_to 'Back', events_path, class: 'btn btn-default'
+    = render 'form'
+    %hr
+    = link_to events_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back
+    = link_to @event, class: 'btn btn-info' do
+      %i.fa.fa-eye
+      Show

@@ -1,30 +1,35 @@
 .page-title
-  %h4 User
-.row
-  .col-md-12
-    .card
-      .card-block
-        %h4.card-title List all users
-        %table.table
-          %thead
-            %tr
-              %th Name 
-              %th Role
-              %th Email
-              %th Actions
-            
-          %tbody
-          - @users.each do |user|
-            %tr
-              %td 
-                = user.name
-              %td
-                = user.role
-              %td 
-                = user.email
-              %td
-                = link_to 'Show', user, class: 'btn btn-info'
-                = link_to 'Edit', edit_user_path(user), class: 'btn btn-warning'
-                = link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger'
+  %h4 Users
 
-        = link_to 'New User', new_user_path, class: 'btn btn-primary'
+.card
+  .card-block
+    %h4.card-title Listing Users
+    .pull-right
+      = link_to new_user_path, class: 'btn btn-primary' do
+        = fa_icon 'plus'
+        New User
+
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Name 
+          %th Role
+          %th Email
+          %th.text-right Actions
+
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= user.name
+            %td= user.role
+            %td= user.email
+            %td.text-right
+              = link_to user, class: 'btn btn-info' do
+                = fa_icon 'eye'
+                Show
+              = link_to [:edit, user], class: 'btn btn-primary' do
+                = fa_icon 'edit'
+                Edit
+              = link_to user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do
+                = fa_icon 'trash'
+                Delete

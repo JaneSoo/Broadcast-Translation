@@ -6,12 +6,21 @@
     .mobile-toggle.side-nav-toggle
       %a{:href => ""}
         %i.ti-arrow-circle-left
+
   %ul.side-nav-menu.scrollable
-    %li.nav-item
+
+    %li.nav-item.active
       = link_to root_url, class: 'mrg-top-30' do
         %span.icon-holder
           %i.ti-home
         %span.title Dashboard
+
+    %li.nav-item
+      = link_to translators_url do
+        %span.icon-holder
+          %i.ti-user
+        %span.title Translators
+
     %li.nav-item
       = link_to users_url do
         %span.icon-holder

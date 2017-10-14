@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
-  get 'dashboard/index'
+  
   root 'dashboard#index'
 
+  resources :translators
   resources :users
+  resources :events
 
   scope 'auth' do
     devise_for :users
