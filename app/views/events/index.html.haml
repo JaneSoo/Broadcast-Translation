@@ -1,40 +1,39 @@
 .page-title
   %h4 Event
-.row
-  .col-md-12
-    .card
-      .card-block
-        %h4.card-title Listing Events
-        .pull-right
-          = link_to new_event_path, class: 'btn btn-primary' do
-            = fa_icon 'plus'
-            New Event
 
-        %table.table
-          %thead
-            %tr
-              %th Title
-              %th Venue
-              %th Start date
-              %th End date
-              %th User
-              %th.text-right Actions
+.card
+  .card-block
+    %h4.card-title Listing Events
+    .pull-right
+      = link_to new_event_path, class: 'btn btn-primary' do
+        = fa_icon 'plus'
+        New Event
 
-          %tbody
-            - @events.each do |event|
-              %tr
-                %td= event.title
-                %td= event.venue
-                %td= event.start_date
-                %td= event.end_date
-                %td= event.user.name
-                %td.text-right
-                  = link_to event, class: 'btn btn-info' do
-                    = fa_icon 'eye'
-                    Show
-                  = link_to [:edit, event], class: 'btn btn-primary' do
-                    = fa_icon 'edit'
-                    Edit
-                  = link_to event, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do
-                    = fa_icon 'trash'
-                    Delete
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Title
+          %th Venue
+          %th Start date
+          %th End date
+          %th User
+          %th.text-right Actions
+
+      %tbody
+        - @events.each do |event|
+          %tr
+            %td= event.title
+            %td= event.venue
+            %td= event.start_date
+            %td= event.end_date
+            %td= event.user.name
+            %td.text-right
+              = link_to event, class: 'btn btn-info' do
+                = fa_icon 'eye'
+                Show
+              = link_to [:edit, event], class: 'btn btn-primary' do
+                = fa_icon 'edit'
+                Edit
+              = link_to event, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do
+                = fa_icon 'trash'
+                Delete

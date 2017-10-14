@@ -1,0 +1,25 @@
+%page.title
+  %h4 Broadcast Room
+%p#notice= notice
+.card
+  .card-block
+    %h4.card-title Show Broadcast Room
+  .mrg-top-20
+    %table.table
+      %col{width: 10}
+      %col{width: 300}
+      %tr
+        %th Title :
+        %td= @broadcast_room.title
+      %tr
+        %th Event :
+        %td= @broadcast_room.event.title
+
+    %hr
+    .mrg-top-25
+      = link_to broadcast_rooms_path, class: 'btn btn-default' do
+        %i.fa.fa-chevron-left
+        Back
+      = link_to [:edit, @broadcast_room], class: 'btn btn-primary' do
+        %i.fa.fa-edit
+        Edit
