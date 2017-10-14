@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   get 'dashboard/index'
   root 'dashboard#index'
 
