@@ -7,7 +7,11 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def set_layout
-    devise_controller? ? 'devise' : 'application'
-  end
+    def set_layout
+      devise_controller? ? 'devise' : 'application'
+    end
+
+    def after_sign_in_path_for(resource)
+      dashboard_index
+    end
 end
