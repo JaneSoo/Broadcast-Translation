@@ -1,18 +1,32 @@
-%p#notice= notice
+.page-title
+  %h4 Translators
+.card
+  .card-block
+    %h4.card-title Show Translator
+    %hr
+  .mrg-top-20
+    %table.table
+      %col{width: 10}
+      %col{width: 300}
+      %tr
+        %th Name :
+        %td= @translator.name
+      %tr
+        %th Email :
+        %td= @translator.email
+      %tr
+        %th Phone :
+        %td= @translator.phone
 
-%p
-  %b Name:
-  = @translator.name
-%p
-  %b Email:
-  = @translator.email
-%p
-  %b Phone:
-  = @translator.phone
-%p
-  %b Gender:
-  = @translator.gender
+      %tr
+        %th Gender :
+        %td= @translator.gender
 
-= link_to 'Edit', edit_translator_path(@translator)
-\|
-= link_to 'Back', translators_path
+    %hr
+    .mrg-top-25
+      = link_to translators_path, class: 'btn btn-default' do
+        %i.fa.fa-chevron-left
+        Back
+      = link_to [:edit, @translator], class: 'btn btn-primary' do
+        %i.fa.fa-edit
+        Edit

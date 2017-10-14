@@ -1,9 +1,11 @@
-= simple_form_for(@translator) do |f|
-  = f.error_notification
+.card
+  .mrg-top-20
+    = simple_form_for(@translator) do |f|
+      = f.error_notification
 
-  = f.input :name
-  = f.input :email
-  = f.input :phone
-  = f.input :gender, collection: Translator::GENDER
-
-  = f.button :submit, class: 'btn btn-primary'
+      = f.input :name
+      = f.input :email
+      = f.input :phone
+      = f.input :gender, collection: Translator::GENDER
+      %hr
+      = f.button :submit, class: 'btn btn-primary'
