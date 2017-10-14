@@ -1,0 +1,33 @@
+.page-title
+  %h4 Broadcast Room
+
+.card
+  .card-block
+    %h4.card-title Listing Broadcst Rooms
+    .pull-right
+      = link_to new_broadcast_room_path, class: 'btn btn-primary' do
+        = fa_icon 'plus'
+        New Broadcast Room
+
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Title
+          %th Event
+          %th.text-right Actions
+
+      %tbody
+        - @broadcast_rooms.each do |broadcast_room|
+          %tr
+            %td= broadcast_room.title
+            %td= broadcast_room.event.title
+            %td.text-right
+              = link_to broadcast_room, class: 'btn btn-info' do
+                = fa_icon 'eye'
+                Show
+              = link_to [:edit, broadcast_room], class: 'btn btn-primary' do
+                = fa_icon 'edit'
+                Edit
+              = link_to broadcast_room, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do
+                = fa_icon 'trash'
+                Delete

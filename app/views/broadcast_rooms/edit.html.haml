@@ -1,0 +1,15 @@
+.page-title
+  %h4 Broadcast Room
+
+.card
+  .card-block
+    %h4.card-title Editing Broadcast Room
+
+    = render 'form'
+    %hr
+    = link_to broadcast_rooms_path, class: 'btn btn-default' do
+      %i.fa.fa-chevron-left
+      Back
+    = link_to @broadcast_room, class: 'btn btn-info' do
+      %i.fa.fa-eye
+      Show
