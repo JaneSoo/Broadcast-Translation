@@ -5,6 +5,9 @@
   .card-block
     %h4.card-title Show Event
   .mrg-top-20
+    %div{align: 'center'}
+      = image_tag @event.thumbnail_url, size: '150x150'
+    %br
     %table.table
       %col{width: 10}
       %col{width: 300}
@@ -23,6 +26,8 @@
       %tr
         %th Created by:
         %td= @event.user.name
+         
+        
     %hr
     .mrg-top-25
       = link_to events_path, class: 'btn btn-default' do

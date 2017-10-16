@@ -6,13 +6,16 @@ Rails.application.routes.draw do
     resources :users
     resources :events
     resources :requests, only: [:show, :index]
-    resources :dashboard, only: :index
-
+    resources :dashboard, only: [:index]
     scope 'auth' do
       devise_for :users
     end
   end
 
   root "home#index"
+  get "event" => 'home#event'
+  get "about" => 'home#about'
+
+  resources :admin, only: [:index]
 
 end
