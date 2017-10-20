@@ -5,6 +5,9 @@
   .card-block
     %h4.card-title Show User
   .mrg-top-20
+    %div{align: 'center'}
+      = image_tag @user.avatar_url, size: '150x150'
+    %br
     %table.table
       %col{width: 10}
       %col{width: 300}

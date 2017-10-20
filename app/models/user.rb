@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :events
+
+  mount_uploader :avatar, TumbnailUploader
+  
   ROLES = ['Super', 'Admin']
 
   ROLES.each do |role_name|
